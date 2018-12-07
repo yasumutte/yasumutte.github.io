@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>休むって</title>
+    <link rel="stylesheet" href="https://yasumutte.github.io/site.css">
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-title">
+          <a href="https://yasumutte.github.io/">休むって</a>
+        </h1>
+      </div>
+    </header>
+    
+    <div id="page-content">
+  <header>
+    <date>2018-12-08</date>
+    <h2>パルスでジャム</h2>
+  </header>
+  <p>ということで作った音楽についてもココに置いていこうと思う。</p>
+<p><a href="https://soundcloud.com/yasumutte/pulse-jam">リンク先で聴けます。</a></p>
+<h3 id="konoqu-nituite">この曲について</h3>
+<p>制作日は2017年の5月下旬あたり。</p>
+<p>制作動機は、<a href="https://ja.wikipedia.org/wiki/L-system">L-system</a>を使った曲を作ってみよう、というのがきっかけだったはず。
+正確にいうと、初めは曲にするというよりも「実験してみよう」という気概のほうが強かったけど、
+結果がなかなか面白かったので楽曲として仕上げることになった、という感じ。</p>
+<p>実際にL-systemを使ってみた感想としては、文法的であるゆえに周期性を保ちながらも
+作曲時にはどう生成されるのかが読めない、と周期性とランダム性の両方が得られるのが
+面白いな、と感じた。確率的プロセスと組み合わせるとかなり有機的になる。</p>
+<p>題名については、そのまんまである。矩形波同士がセッションしているようだったので。</p>
+<p>途中のくだりが映像的だなあ、と思う。何かが割り込んできたので演奏をやめたが、
+その割り込んだものも一緒に交わって、さあもう一度、という雰囲気がある。</p>
+<h3 id="kodo">コード</h3>
+<p><a href="https://github.com/yasumutte/pulse_jam">yasumutte/pulse_jam</a></p>
+<p>使ったのはSuperColliderのみ。実行に必須な環境は</p>
+<ul>
+<li>SuperCollider 3.9.x 以上がインストールされていること</li>
+<li>sc3-pluginsがインストールされていること</li>
+</ul>
+<p>の2点。しかしWindowsおよびLinuxでの動作保証はない。</p>
+<p>あとオーディオインターフェイスを使っている場合は<code>Synthdef</code>の出力先を
+SuperCollider内でのオーディオインターフェイスの出力に対応する番号に
+変える必要があるかもしれない。</p>
+<p>それとSynthNodeがちゃんと解放されない謎の現象が起きることがある。</p>
+<p>この曲は元々SuperCollider 3.7だったか3.8だったかの時に作ったものなのだが、
+バージョン3.9に移植してから起きるようになった。
+(ちなみに3.9に移植した理由は<code>Rest</code>の仕様の破壊的変更に対応するため)</p>
+<p>どういう現象か端的に説明すると、音が残ってゆっくり減衰していく。
+無音であってほしい部分に割り込んだりするので厄介である。</p>
+<p>多分<code>Pfindur</code>の<code>PmonoArtic</code>に対する挙動が原因だろう、と
+ヤマを張っているのだが、別に<strong>良いテイクもあれば悪いテイクもある</strong>というのも
+人間味があって悪くないかもしれない、と思ったので直してない。</p>
+
+</div>
+    
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="site-footer__label">
+          (C) 2018- 休むって
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
