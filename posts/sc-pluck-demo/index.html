@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>休むって</title>
+    <link rel="stylesheet" href="https://yasumutte.github.io/site.css">
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-title">
+          <a href="https://yasumutte.github.io/">休むって</a>
+        </h1>
+      </div>
+    </header>
+    
+    <div id="page-content">
+  <header>
+    <date>2018-12-09</date>
+    <h2>SuperColliderで現代的なPluckの音を出す</h2>
+  </header>
+  <p>SuperColliderを使う上で多分一番多い悩みというのが
+「市販のハードウェアシンセやソフトシンセみたいな音が出せない」
+ことだと思う。で、具体的にどういう音かと考えてみると
+要するにSylenthやSerumにある「ユニゾンの太いノコギリ波」を
+作るのはなかなか難しいのではないか、という結論に至った。</p>
+<p>なので作った。</p>
+<p><a href="https://github.com/yasumutte/pluck_demo">yasumutte/pluck_demo</a></p>
+<p><a href="https://soundcloud.com/yasumutte/pluck-demo">デモ音源</a></p>
+<p>実行に必須な環境は</p>
+<ul>
+<li>SuperCollider 3.9.x 以上がインストールされていること</li>
+<li>sc3-pluginsがインストールされていること</li>
+</ul>
+<p>の2点。しかしWindowsおよびLinuxでの動作保証はない。</p>
+<p>あとオーディオインターフェイスを使っている場合は<code>Synthdef</code>の出力先を
+SuperCollider内でのオーディオインターフェイスの出力に対応する番号に
+変える必要があるかもしれない。</p>
+<p>デチューンの割合をどうやって求めたかというと
+単純にkvraudioのフォーラムを参考にしただけ。</p>
+<p>位相のランダマイズに<code>LFNoise</code>を使ってるだけなので
+発声時のアタックにバラつきを感じることがある。
+Sylenthとかはどうやってるんだろうね。</p>
+
+</div>
+    
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="site-footer__label">
+          (C) 2018- 休むって
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
