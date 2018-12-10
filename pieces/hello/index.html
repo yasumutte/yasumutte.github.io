@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>休むって</title>
+    <link rel="stylesheet" href="https://yasumutte.github.io/site.css">
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-title">
+          <a href="https://yasumutte.github.io/">休むって</a>
+        </h1>
+      </div>
+    </header>
+    
+    <div id="page-content">
+  <header>
+    <date>2018-12-10</date>
+    <h2>こんにちは</h2>
+  </header>
+  <p>先日書いた<a href="https://yasumutte.github.io/posts/sc-pluck-demo/">ユニゾンを使ったノコギリ波</a>を
+試したいと思って作った曲。</p>
+<p><a href="https://soundcloud.com/yasumutte/hello">リンク先で聴けます。</a></p>
+<h3 id="konoqu-nituite">この曲について</h3>
+<p>作成開始日は2017年6月8日からで、たしか2~3日で「もういいか」となったはず。</p>
+<p>SuperColliderでマスタリングみたいなことをするのは
+初めてだったので、非常に疲弊した覚えがある。
+こればかりはグラフィックEQが非常に恋しくなった。</p>
+<p>何気にベースがブンブン鳴ってる。こういう曲は
+ベースがブンブン鳴ってればいいのではないか、
+という安直な発想もあったのかもしれない。</p>
+<h3 id="kodo">コード</h3>
+<p><a href="https://github.com/yasumutte/hello">yasumutte/hello</a></p>
+<p>使ったのはSuperColliderのみ。実行に必須な環境は</p>
+<ul>
+<li>SuperCollider 3.9.x 以上がインストールされていること</li>
+<li>sc3-pluginsがインストールされていること</li>
+</ul>
+<p>の2点。しかしWindowsおよびLinuxでの動作保証はない。</p>
+<p>あとオーディオインターフェイスを使っている場合は<code>Synthdef</code>の出力先を
+SuperCollider内でのオーディオインターフェイスの出力に対応する番号に
+変える必要があるかもしれない。</p>
+<p>それとSynthNodeがちゃんと解放されない部分がある。</p>
+<p>これに関しては前から原因がはっきりしていて、Pbindによって
+音価が短すぎる音を発生させた場合、それを正しく解放してくれない、という
+どうにもならない不具合のようなものが前からあるのである。</p>
+<p>まあショートカットキーを使って全部停止、みたいなことはできるので
+致命的ではないので放置しているが・・・うーん。</p>
+
+</div>
+    
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="site-footer__label">
+          (C) 2018- 休むって
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
