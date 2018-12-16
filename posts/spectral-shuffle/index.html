@@ -19,24 +19,28 @@
     <div id="page-content">
   <header>
     <date>2018-12-15</date>
-    <h2>周波数軸処理で音声データを&quot;シャッフル&quot;する</h2>
+    <h2>周波数軸処理で音声データをシャッフルする</h2>
   </header>
   <p>一体どういうことか。
 説明しづらいので音源を聴いてもらいたい。</p>
-<p>TODO: 音声データ (入力、出力)</p>
+<p><a href="https://soundcloud.com/yasumutte/20181207-drums-input">入力データ(ドラム)</a>
+<a href="https://soundcloud.com/yasumutte/20181215-spectral-shuffle-drums-output">出力データ(ドラム)(ブロックサイズ=4096)</a></p>
+<p><a href="https://soundcloud.com/yasumutte/20181207-voice-input">入力データ(ボイス)</a>
+<a href="https://soundcloud.com/yasumutte/20181215-spectral-shuffle-voice-output">出力データ(ボイス)(ブロックサイズ=8192)</a></p>
 <h3 id="shuo-ming">説明</h3>
 <p>端的に言うと、同ブロックサイズで窓関数が適用されたブロックを
 ランダムに入力データからサンプリングし、出力先に加算し
 同一のステップの大きさで出力先のカーソルを進める、という処理を行なっている。</p>
 <p>時間軸でシャッフルするのと何が違うのか、と聞かれると、
-大して何も違わないんだよね。窓関数がエンベロープの役割を
+大して何も違わない。窓関数がエンベロープの役割を
 果たしている、というだけ。周波数軸そのものでのシャッフルというと
 普通はbinのシャッフルなんだけど、それとは全然違うことをやってる、という。</p>
 <p>ちなみに周波数軸でシャッフルするとコンピュータがピコピコ言ってる風になるはず。</p>
 <p>こういうのはどちらかというとグラニュラーシンセシスに近いのかなと思う。
-・・・というかそのものか。</p>
+・・・というかそのものか。でもGSだと畳み込みみたいなことは普通やらないから
+ちょっと違うかも。</p>
 <h3 id="kodo">コード</h3>
-<p>TODO: github</p>
+<p><a href="https://github.com/yasumutte/spectral_shuffle">yasumutte/spectral_shuffle</a></p>
 <p>実行環境については、python2.7かつnumpyおよびscipyがインストールされていれば
 とりあえず動くと思うが、スプリプトの実行結果に関しては
 自己責任ということにしてほしい。</p>
